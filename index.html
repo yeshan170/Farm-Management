@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Farm Management Dashboard</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#crop-management">Crop Management</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="dashboard" class="active">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="card" id="weather-card">
+                        <h3>Weather</h3>
+                        <p id="temperature">Temperature: --°C</p>
+                        <p id="humidity">Humidity: --%</p>
+                        <p id="wind-speed">Wind Speed: -- km/h</p>
+                    </div>
+                    <div class="card" id="crop-summary">
+                        <h3>Crop Summary</h3>
+                        <ul id="crop-list"></ul>
+                    </div>
+                    <div class="card" id="inventory-summary">
+                        <h3>Inventory Summary</h3>
+                        <ul id="inventory-list"></ul>
+                    </div>
+                </div>
+            </section>
+            <section id="crop-management">
+                <h2>Crop Management</h2>
+                <div class="crop-grid" id="crop-grid"></div>
+                <div class="add-crop">
+                    <h3>Add New Crop</h3>
+                    <input type="text" id="crop-name" placeholder="Crop Name">
+                    <input type="text" id="crop-stage" placeholder="Growth Stage">
+                    <input type="number" id="crop-health" placeholder="Health (%)" min="0" max="100">
+                    <button id="add-crop-btn">Add Crop</button>
+                </div>
+            </section>
+            <section id="inventory">
+                <h2>Inventory Management</h2>
+                <table id="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventory-body"></tbody>
+                </table>
+                <div class="add-inventory">
+                    <h3>Add New Item</h3>
+                    <input type="text" id="item-name" placeholder="Item Name">
+                    <input type="number" id="item-quantity" placeholder="Quantity">
+                    <input type="text" id="item-unit" placeholder="Unit">
+                    <button id="add-item-btn">Add Item</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
